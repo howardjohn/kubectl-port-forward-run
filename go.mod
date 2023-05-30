@@ -1,4 +1,4 @@
-module github.com/howardjohn/kubectl-port-forward-run
+module github.com/howardjohn/kubectl-port_forward_run
 
 go 1.20
 

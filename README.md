@@ -4,7 +4,7 @@
 
 ## Install
 
-`go install github.com/howardjohn/kubectl-port-forward-run@latest`
+`go install github.com/howardjohn/kubectl-port_forward_run@latest`
 
 ## Usage
 

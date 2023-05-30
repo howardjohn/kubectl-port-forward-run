@@ -1,6 +1,6 @@
 .ONESHELL:
 SHELL := /bin/bash
-MODULE = github.com/howardjohn/kubectl-port-forward-run
+MODULE = github.com/howardjohn/kubectl-port_forward_run
 
 all: format
 .PHONY: check-git
