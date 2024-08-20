@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"net"
 	"os"
 	"os/signal"
 	"strconv"
@@ -33,7 +34,7 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:          "kubectl port-forward-run TYPE/NAME REMOTE_PORT -- curl localhost:{}",
+	Use:          "kubectl port-forward-run TYPE/NAME REMOTE_PORT -- curl }",
 	Short:        "Plugin run a command with a port-forward established",
 	Args:         cobra.MinimumNArgs(3),
 	SilenceUsage: true,
@@ -137,7 +138,7 @@ const (
 func replacePort(s []string, port uint16) {
 	p := strconv.Itoa(int(port))
 	for i, v := range s {
-		s[i] = strings.ReplaceAll(v, "{}", p)
+		s[i] = strings.ReplaceAll(v, "{}", net.JoinHostPort("localhost", p))
 	}
 }
 

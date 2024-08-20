@@ -11,7 +11,7 @@
 Example output:
 
 ```
-$ kubectl port-forward-run pod/some-pod 80 -- curl localhost:{}
+$ kubectl port-forward-run pod/some-pod 80 -- curl {}
 ```
 
 This will port-forward to `some-pod` on port 80 and execute the `curl` command.
